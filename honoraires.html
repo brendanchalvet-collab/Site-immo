@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Honoraires — KELO'ESTATE</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+.honoraires-page {
+  margin-top: 100px;
+  background: white;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 80px 20px;
+  text-align: center;
+}
+
+.honoraires-logo {
+  max-width: 320px;
+  width: 100%;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.honoraires-page h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #0D1B3D;
+  margin-bottom: 32px;
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.honoraires-page h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #D4AF37;
+  border-radius: 2px;
+}
+
+.honoraires-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin-bottom: 36px;
+}
+
+.honoraires-table tr {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.honoraires-table tr:last-child {
+  border-bottom: none;
+}
+
+.honoraires-table td {
+  padding: 14px 12px;
+  font-size: 1rem;
+  color: #0D1B3D;
+  line-height: 1.5;
+}
+
+.honoraires-table td:first-child {
+  font-weight: 600;
+  text-align: left;
+  width: 55%;
+}
+
+.honoraires-table td:last-child {
+  text-align: right;
+  color: #D4AF37;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.honoraires-note {
+  max-width: 620px;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.7;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 24px;
+  margin-bottom: 20px;
+}
+
+.honoraires-siret {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0D1B3D;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 500px) {
+  .honoraires-table tr {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  .honoraires-table td {
+    text-align: center !important;
+    padding: 4px 0;
+    width: 100% !important;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo2.jpeg" alt="logo">
+    </a>
+  </div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="achat-vente.html">Achat / Vente</a>
+    <a href="gestion.html">Gestion locative</a>
+    <a href="estimation.html">Estimation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- CONTENU -->
+<div class="honoraires-page">
+
+  <img class="honoraires-logo" src="images/logo1.jpeg" alt="Logo KELO'ESTATE">
+
+  <h2>Honoraires dans le cadre d'une VENTE</h2>
+
+  <table class="honoraires-table">
+    <tr>
+      <td>Jusqu'à 50 000 €</td>
+      <td>Forfait 5 000 €</td>
+    </tr>
+    <tr>
+      <td>De 50 001 € à 300 000 €</td>
+      <td>6 % TTC</td>
+    </tr>
+    <tr>
+      <td>Au-delà de 300 001 €</td>
+      <td>5 % TTC</td>
+    </tr>
+  </table>
+
+  <p class="honoraires-note">
+    Les honoraires sont à la charge du vendeur, sauf en cas de convention expresse.
+    La différence entre les parties est précisée dans le mandat.
+  </p>
+
+  <p class="honoraires-siret">S.A.S KELO'ESTATE — NICE — SIRET 992 666 636 00012</p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-light">
+    <div class="footer-column">
+      <p><strong>L'AGENCE</strong></p>
+      <p><strong>2 Place de la Gare du Sud,<br>06000 NICE</strong></p>
+      <p><a href="contact.html">Nous contacter</a></p>
+      <p><a href="presentation.html">Présentation</a></p>
+    </div>
+    <div class="footer-column">
+      <p><strong>Nos services</strong></p>
+      <p><a href="achat-vente.html">Achat / Vente</a></p>
+      <p><a href="gestion.html">Gestion locative</a></p>
+      <p><a href="estimation.html">Estimation</a></p>
+    </div>
+    <div class="footer-column">
+      <p><strong>Liens utiles</strong></p>
+      <p><a href="honoraires.html">Nos honoraires</a></p>
+      <p><a href="mentions-legales.html">Mentions légales</a></p>
+      <p><a href="politiques-confidentialite.html">Politique de confidentialité</a></p>
+    </div>
+  </div>
+  <div class="footer-top">
+    <div class="socials">
+      <a href="https://www.instagram.com/keloestate/" target="_blank">
+        <img src="images/insta.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/toncompte" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 KELO'ESTATE</p>
+  </div>
+</footer>
+
+<!-- NAVBAR SCRIPT -->
+<script>
+document.querySelector(".hamburger").addEventListener("click", () => {
+  document.querySelector(".menu").classList.toggle("active");
+  document.querySelector(".hamburger").classList.toggle("open");
+});
+</script>
+
+</body>
+</html>

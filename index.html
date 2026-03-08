@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agence Immobilière Bretagne et Cote d'Azur</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- NAV BAR -->
+<nav class="navbar">
+
+<div class="logo">
+<img src="images/logo2.jpeg" alt="logo">
+</div>
+
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="menu">
+<a href="index.html">Accueil</a>
+<a href="achat-vente.html">Achat / Vente</a>
+<a href="gestion.html">Gestion locative</a>
+<a href="estimation.html">Estimation</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Votre partenaire immobilier en Bretagne et sur la Côte d'Azur</h1>
+        <p>Trouvons ensemble ce qui vous ressemble</p>
+        <a class="cta" href="estimation.html">Estimer mon bien</a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+    <h2>Nos services</h2>
+    <div class="services-grid">
+        <div class="card">
+            <img src="images/achat-vente.jpg" alt="Achat/Vente">
+            <h3>Achat / Vente</h3>
+            <p>Nous vous accompagnons dans toutes les étapes de l'achat ou de la vente de votre bien.</p>
+            <a href="achat-vente.html" class="btn-service">Découvrir</a>
+        </div>
+
+        <div class="card">
+            <img src="images/gestion-locative.jpg" alt="Gestion Locative">
+            <h3>Gestion locative</h3>
+            <p>Confiez-nous la gestion complète de votre bien et profitez d'une tranquillité totale.</p>
+            <a href="gestion.html" class="btn-service">Découvrir</a>
+        </div>
+
+        <div class="card">
+            <img src="images/estimation.jpg" alt="Estimation">
+            <h3>Estimation</h3>
+            <p>Obtenez une estimation rapide et fiable de la valeur de votre bien immobilier.</p>
+            <a href="estimation.html" class="btn-service">Estimer</a>
+        </div>
+    </div>
+</section>
+
+<!-- BIENS EN VENTE -->
+<section class="biens">
+    <h2>Biens récents</h2>
+    <div class="carousel-container" id="biens-carousel">
+        <button class="arrow prev">&#10094;</button>
+        <div class="biens-grid" id="biens-grid"></div>
+        <button class="arrow next">&#10095;</button>
+    </div>
+</section>
+
+<!-- BIENS EN LOCATIONS -->
+<section class="biens">
+    <h2>Locations</h2>
+    <div class="carousel-container" id="locations-carousel">
+        <button class="arrow prev">&#10094;</button>
+        <div class="biens-grid" id="locations-grid"></div>
+        <button class="arrow next">&#10095;</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-light">
+
+  <div class="footer-column">
+    <p><strong>L'AGENCE</strong></p>
+    <p><strong>2 Place de la Gare du Sud,<br>
+    06000 NICE</strong></p>
+    <p><a href="contact.html">Nous contacter</a></p>
+    <p><a href="presentation.html">Présentation</a></p>
+  </div>
+
+  <div class="footer-column">
+    <p><strong>Nos services</strong></p>
+    <p><a href="achat-vente.html">Achat / Vente</a></p>
+    <p><a href="gestion.html">Gestion locative</a></p>
+    <p><a href="estimation.html">Estimation</a></p>
+  </div>
+
+  <div class="footer-column">
+    <p><strong>Lien utiles</strong></p>
+    <p><a href="honoraires.html">Nos honoraires</a></p>
+    <p><a href="mentions-legales.html">Mentions légales</a></p>
+    <p><a href="politiques-confidentialite.html">Politiques de confidentialités</a></p>
+  </div>
+
+</div>
+
+  <!-- Partie bleue -->
+  <div class="footer-top">
+    <div class="socials">
+      <a href="https://www.instagram.com/keloestate/" target="_blank">
+        <img src="images/insta.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/toncompte" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+
+  <!-- Partie blanche -->
+  <div class="footer-bottom">
+    <p>© 2026 KELO'ESATE</p>
+  </div>
+
+</footer>
+
+<!-- ALGO CARROUSEL -->
+<script>
+function initCarousel(containerId, jsonFile, linkPrefix) {
+    const container = document.getElementById(containerId);
+    const track = container.querySelector('.biens-grid');
+    const prev = container.querySelector('.prev');
+    const next = container.querySelector('.next');
+
+    let items = [];
+
+    // Récupération du JSON
+    fetch(jsonFile)
+        .then(res => res.json())
+        .then(data => {
+            items = data;
+            renderAll();
+        })
+        .catch(err => console.error(`Erreur chargement ${jsonFile}:`, err));
+
+    function renderAll() {
+        track.innerHTML = "";
+        items.forEach((item, index) => {
+            const card = document.createElement('div');
+            card.classList.add('bien-card');
+            card.onclick = () => window.location.href = `${linkPrefix}.html?index=${index}`;
+
+            // Ajout d'un badge selon le statut
+            let badge = "";
+            if(item.statut === "en vente") badge = '<span class="badge vente">En vente</span>';
+            else if(item.statut === "sous offre") badge = '<span class="badge offre">Sous offre</span>';
+            else if(item.statut === "sous compromis") badge = '<span class="badge compromis">Sous compromis</span>';
+            else if(item.statut === "vendu") badge = '<span class="badge vendu">Vendu</span>';
+
+            card.innerHTML = `
+                <div class="image-container">
+                    <img src="${item.image}" alt="${item.titre}">
+                    ${badge}
+                </div>
+                <div class="bien-info">
+                    <h4>${item.titre}</h4>
+                    <p class="prix">${item.prix}</p>
+                </div>
+            `;
+            track.appendChild(card);
+        });
+    }
+
+    // Scroll
+    prev.addEventListener('click', () => {
+        const cardWidth = track.querySelector('.bien-card').offsetWidth + 20;
+        track.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' });
+    });
+    next.addEventListener('click', () => {
+        const cardWidth = track.querySelector('.bien-card').offsetWidth + 20;
+        track.scrollBy({ left: cardWidth * 3, behavior: 'smooth' });
+    });
+}
+
+// Initialisation
+initCarousel('biens-carousel', 'biens.json', 'bien');
+initCarousel('locations-carousel', 'locations.json', 'location');
+</script>
+
+
+<!-- NAV BAR -->
+<script>
+
+const hamburger = document.querySelector(".hamburger")
+const menu = document.querySelector(".menu")
+
+hamburger.addEventListener("click", () => {
+
+menu.classList.toggle("active")
+hamburger.classList.toggle("open")
+
+})
+
+</script>
+
+</body>
+</html>
+

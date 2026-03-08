@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gestion locative - Agence Immobilière</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* SECTION SERVICES */
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+padding:40px;
+}
+
+.services-grid .card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+text-align:center;
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-grid .card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.services-grid img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.services-grid h3{
+margin:15px 0 10px;
+color:#0D1B3D;
+}
+
+.services-grid p{
+padding:0 20px 20px;
+}
+
+/* PROCESS */
+.process{
+padding:60px 20px;
+background:#f8f8f8;
+text-align:center;
+}
+
+.process-steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+margin-top:40px;
+}
+
+.step{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.step h4{
+color:#D4AF37;
+margin-bottom:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+.services-grid{grid-template-columns:repeat(2,1fr);}
+.process-steps{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:768px){
+.services-grid{grid-template-columns:1fr;}
+.process-steps{grid-template-columns:1fr;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV BAR -->
+<nav class="navbar">
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo2.jpeg" alt="logo">
+    </a>
+  </div>
+
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="achat-vente.html">Achat / Vente</a>
+    <a href="gestion.html">Gestion locative</a>
+    <a href="estimation.html">Estimation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+</nav>
+
+
+
+<!-- INTRO -->
+
+<section class="services" style="margin-top:120px;text-align:center;">
+<h2>Gestion locative</h2>
+
+<p style="max-width:800px;margin:auto;">
+Confiez-nous la gestion de votre bien immobilier et profitez d’une gestion
+complète et sécurisée. Nous nous occupons de toutes les démarches afin de
+valoriser votre patrimoine et garantir la tranquillité de votre investissement.
+</p>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<div class="services-grid">
+
+<div class="card">
+<img src="images/location.jpg" alt="Recherche locataire">
+<h3>Recherche de locataires</h3>
+<p>
+Diffusion de votre bien, sélection des dossiers,
+organisation des visites et choix du locataire idéal.
+</p>
+</div>
+
+<div class="card">
+<img src="images/loyers.jpg" alt="Gestion loyers">
+<h3>Gestion des loyers</h3>
+<p>
+Encaissement des loyers, quittances, relances et suivi
+des paiements pour sécuriser vos revenus locatifs.
+</p>
+</div>
+
+<div class="card">
+<img src="images/administratif.jpg" alt="Suivi administratif">
+<h3>Suivi administratif</h3>
+<p>
+Rédaction des baux, états des lieux,
+gestion des assurances et obligations légales.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process">
+
+<h2>Comment fonctionne la gestion locative ?</h2>
+
+<div class="process-steps">
+
+<div class="step">
+<h4>1. Mise en location</h4>
+<p>Estimation du loyer et diffusion de l’annonce.</p>
+</div>
+
+<div class="step">
+<h4>2. Sélection</h4>
+<p>Analyse des dossiers et sélection du locataire.</p>
+</div>
+
+<div class="step">
+<h4>3. Gestion</h4>
+<p>Encaissement des loyers et gestion quotidienne.</p>
+</div>
+
+<div class="step">
+<h4>4. Suivi du bien</h4>
+<p>Gestion des travaux et entretien du logement.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-light">
+
+<div class="footer-column">
+<p><strong>L'AGENCE</strong></p>
+<p><strong>2 Place de la Gare du Sud,<br>06000 NICE</strong></p>
+<p><a href="contact.html">Nous contacter</a></p>
+<p><a href="presentation.html">Présentation</a></p>
+</div>
+
+<div class="footer-column">
+<p><strong>Nos services</strong></p>
+<p><a href="achat-vente.html">Achat / Vente</a></p>
+<p><a href="gestion.html">Gestion locative</a></p>
+<p><a href="estimation.html">Estimation</a></p>
+</div>
+
+<div class="footer-column">
+<p><strong>Lien utiles</strong></p>
+<p><a href="honoraires.html">Nos honoraires</a></p>
+<p><a href="mentions-legales.html">Mentions légales</a></p>
+<p><a href="politiques-confidentialite.html">Politiques de confidentialités</a></p>
+</div>
+
+</div>
+
+<div class="footer-top">
+
+<div class="socials">
+
+<a href="https://www.instagram.com/keloestate/" target="_blank">
+<img src="images/insta.png" alt="Instagram">
+</a>
+
+<a href="https://www.linkedin.com/in/toncompte" target="_blank">
+<img src="images/linkedin.png" alt="LinkedIn">
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 KELO'ESTATE</p>
+</div>
+
+</footer>
+
+<!-- NAV BAR -->
+<script>
+
+const hamburger = document.querySelector(".hamburger")
+const menu = document.querySelector(".menu")
+
+hamburger.addEventListener("click", () => {
+
+menu.classList.toggle("active")
+hamburger.classList.toggle("open")
+
+})
+
+</script>
+
+</body>
+</html>

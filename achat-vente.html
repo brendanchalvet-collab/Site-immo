@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Achat / Vente - Agence Immobilière</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* ============================= */
+/* BIENS GRID */
+/* ============================= */
+.biens-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.bien-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.bien-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.bien-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bien-info {
+    padding: 15px;
+}
+
+.bien-info h4 {
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    color: #0D1B3D;
+}
+
+.prix {
+    font-weight: bold;
+    color: #D4AF37;
+    font-size: 1.1em;
+}
+
+/* ============================= */
+/* BADGES */
+/* ============================= */
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 14px;
+    font-size: 0.85em;
+    font-weight: bold;
+    border-radius: 20px;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.badge.vente { background: linear-gradient(45deg,#28a745,#218838); }
+.badge.offre { background: linear-gradient(45deg,#ffc107,#e0a800); color:#0D1B3D; }
+.badge.compromis { background: linear-gradient(45deg,#17a2b8,#138496); }
+.badge.vendu { background: linear-gradient(45deg,#dc3545,#c82333); }
+
+/* Responsive */
+@media (max-width: 992px) { .biens-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .biens-grid { grid-template-columns: 1fr; } }
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV BAR -->
+<nav class="navbar">
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo2.jpeg" alt="logo">
+    </a>
+  </div>
+
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="achat-vente.html">Achat / Vente</a>
+    <a href="gestion.html">Gestion locative</a>
+    <a href="estimation.html">Estimation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+</nav>
+
+<!-- SERVICES DÉTAILLÉS -->
+<section class="services" style="margin-top:120px;">
+    <h2>Notre accompagnement</h2>
+    <div class="services-grid">
+        <div class="card">
+            <img src="images/achat-vente.jpg" alt="Achat/Vente">
+            <h3>Estimation du bien</h3>
+            <p>Une estimation précise et fiable pour définir le juste prix de votre bien.</p>
+        </div>
+        <div class="card">
+            <img src="images/visites.png" alt="Diffusion et visites">
+            <h3>Diffusion des annonces</h3>
+            <p>Nous diffusons votre bien sur les plateformes les plus pertinentes pour toucher un large public.</p>
+        </div>
+        <div class="card">
+            <img src="images/signature.jpg" alt="Négociation">
+            <h3>Organisation des visites & Négociation</h3>
+            <p>Nous gérons les visites et négocions pour obtenir les meilleures conditions pour vous.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BIENS À VENDRE -->
+<section class="biens">
+    <h2>Biens en vente</h2>
+    <div class="biens-grid" id="vente-grid"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-light">
+  <div class="footer-column">
+    <p><strong>L'AGENCE</strong></p>
+    <p><strong>2 Place de la Gare du Sud,<br>06000 NICE</strong></p>
+    <p><a href="contact.html">Nous contacter</a></p>
+    <p><a href="presentation.html">Présentation</a></p>
+  </div>
+  <div class="footer-column">
+    <p><strong>Nos services</strong></p>
+    <p><a href="achat-vente.html">Achat / Vente</a></p>
+    <p><a href="gestion.html">Gestion locative</a></p>
+    <p><a href="estimation.html">Estimation</a></p>
+  </div>
+  <div class="footer-column">
+    <p><strong>Lien utiles</strong></p>
+    <p><a href="honoraires.html">Nos honoraires</a></p>
+    <p><a href="mentions-legales.html">Mentions légales</a></p>
+    <p><a href="politiques-confidentialite.html">Politiques de confidentialités</a></p>
+  </div>
+</div>
+
+<div class="footer-top">
+  <div class="socials">
+    <a href="https://www.instagram.com/keloestate/" target="_blank">
+      <img src="images/insta.png" alt="Instagram">
+    </a>
+    <a href="https://www.linkedin.com/in/toncompte" target="_blank">
+      <img src="images/linkedin.png" alt="LinkedIn">
+    </a>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  <p>© 2026 KELO'ESATE</p>
+</div>
+</footer>
+
+<!-- Fonction pour afficher les biens avec badge -->
+<script>
+function afficherBiens(jsonFile, containerId, linkPrefix) {
+    const container = document.getElementById(containerId);
+
+    fetch(jsonFile)
+        .then(res => res.json())
+        .then(items => {
+            container.innerHTML = ""; // vide la grille avant
+            items.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.classList.add('bien-card');
+                card.onclick = () => window.location.href = `${linkPrefix}.html?index=${index}`;
+
+                // Badge selon statut
+                let badgeHTML = "";
+                if(item.statut === "en vente") badgeHTML = '<span class="badge vente">En vente</span>';
+                else if(item.statut === "sous offre") badgeHTML = '<span class="badge offre">Sous offre</span>';
+                else if(item.statut === "sous compromis") badgeHTML = '<span class="badge compromis">Sous compromis</span>';
+                else if(item.statut === "vendu") badgeHTML = '<span class="badge vendu">Vendu</span>';
+
+                card.innerHTML = `
+                    <img src="${item.image}" alt="${item.titre}">
+                    ${badgeHTML}
+                    <div class="bien-info">
+                        <h4>${item.titre}</h4>
+                        <p class="prix">${item.prix}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        })
+        .catch(err => console.error(`Erreur chargement ${jsonFile}:`, err));
+}
+
+// Appel de la fonction
+afficherBiens('biens.json', 'vente-grid', 'bien');
+</script>
+
+<!-- NAV BAR -->
+<script>
+
+const hamburger = document.querySelector(".hamburger")
+const menu = document.querySelector(".menu")
+
+hamburger.addEventListener("click", () => {
+
+menu.classList.toggle("active")
+hamburger.classList.toggle("open")
+
+})
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Présentation - Agence Immobilière KELO'ESTATE</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* ============================= */
+/* PRESENTATION SECTIONS */
+/* ============================= */
+.presentation-section {
+    max-width: 1200px;
+    margin: 150px auto 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.presentation-section h2 {
+    font-size: 2.2em;
+    color: #0D1B3D;
+    margin-bottom: 40px;
+}
+
+.presentation-section p {
+    font-size: 1.1em;
+    color: #0D1B3D;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Grid de présentation des services */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    flex: 0 0 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #D4AF37;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #0D1B3D;
+    line-height: 1.6;
+}
+
+/* Section équipe */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.team-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    flex: 0 0 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #0D1B3D;
+}
+
+.team-card p {
+    font-size: 0.95em;
+    color: #0D1B3D;
+}
+
+/* Section Pourquoi nous choisir */
+.why-choose {
+    background: #f4f4f4;
+    padding: 60px 20px;
+    margin-top: 60px;
+    border-radius: 12px;
+}
+
+.why-choose h3 {
+    color: #0D1B3D;
+    margin-bottom: 20px;
+}
+
+.why-choose p {
+    font-size: 1.05em;
+    color: #0D1B3D;
+    margin-bottom: 15px;
+}
+
+/* Logo centré sous la navbar fixe */
+.logo-page {
+    text-align: center;
+    margin-top: 50px; /* décale sous la navbar fixe */
+    margin-bottom: -150px;
+}
+
+/* Logo hero 2× plus gros et réduction de l'espace vertical avant le titre */
+.logo-page img {
+    max-width: 600px; /* 2× plus gros */
+    border-radius: 10px;
+    padding: 5px;
+    background: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV BAR -->
+<nav class="navbar">
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo2.jpeg" alt="logo">
+    </a>
+  </div>
+
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="achat-vente.html">Achat / Vente</a>
+    <a href="gestion.html">Gestion locative</a>
+    <a href="estimation.html">Estimation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+</nav>
+
+<!-- SECTION INTRO -->
+<section class="presentation-section">
+    <h2>Bienvenue chez KELO'ESTATE</h2>
+    <p>Nous sommes votre partenaire de confiance pour toutes vos transactions immobilières en Bretagne et sur la Côte d’Azur. Notre équipe expérimentée vous accompagne de l’estimation de votre bien jusqu’à la signature finale.</p>
+</section>
+
+<!-- SECTION SERVICES -->
+<section class="presentation-section">
+    <h2>Nos services</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Achat / Vente</h3>
+            <p>Nous vous aidons à acheter ou vendre votre bien dans les meilleures conditions. Expertise locale, accompagnement personnalisé et visibilité maximale pour vos annonces.</p>
+        </div>
+        <div class="service-card">
+            <h3>Gestion Locative</h3>
+            <p>Nous gérons vos biens en location de A à Z : recherche de locataires, rédaction des baux, suivi administratif et technique, et encaissement des loyers.</p>
+        </div>
+        <div class="service-card">
+            <h3>Estimation</h3>
+            <p>Nos experts estiment vos biens au juste prix du marché grâce à notre connaissance approfondie de la région et des tendances immobilières locales.</p>
+        </div>
+        <div class="service-card">
+            <h3>Conseil Patrimonial</h3>
+            <p>Nous vous conseillons pour optimiser vos investissements immobiliers et préparer votre patrimoine sur le long terme, avec une approche personnalisée.</p>
+        </div>
+        <div class="service-card">
+            <h3>Accompagnement Juridique</h3>
+            <p>Notre équipe vous accompagne pour toutes les démarches légales et contractuelles, afin de sécuriser vos transactions et vos investissements.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION NOTRE ÉQUIPE -->
+<section class="presentation-section">
+    <h2>Notre équipe</h2>
+    <div class="team-grid">
+        <div class="team-card">
+            <img src="images/person1.jpeg" alt="Valentin DEROUET">
+            <h4>Valentin DEROUET</h4>
+            <p>Directeur et expert en transactions immobilières.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION POURQUOI NOUS CHOISIR -->
+<section class="presentation-section why-choose">
+    <h2>Pourquoi nous choisir ?</h2>
+    <p>Un accompagnement personnalisé à chaque étape de votre projet immobilier.</p>
+    <p>Une connaissance fine du marché local pour des transactions optimisées.</p>
+    <p>Une équipe professionnelle et réactive, disponible pour vous 7j/7.</p>
+    <p>Une transparence totale sur les frais et les démarches.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-light">
+
+  <div class="footer-column">
+    <p><strong>L'AGENCE</strong></p>
+    <p><strong>2 Place de la Gare du Sud,<br>
+    06000 NICE</strong></p>
+    <p><a href="contact.html">Nous contacter</a></p>
+    <p><a href="presentation.html">Présentation</a></p>
+  </div>
+
+  <div class="footer-column">
+    <p><strong>Nos services</strong></p>
+    <p><a href="achat-vente.html">Achat / Vente</a></p>
+    <p><a href="gestion.html">Gestion locative</a></p>
+    <p><a href="estimation.html">Estimation</a></p>
+  </div>
+
+  <div class="footer-column">
+    <p><strong>Lien utiles</strong></p>
+    <p><a href="honoraires.html">Nos honoraires</a></p>
+    <p><a href="mentions-legales.html">Mentions légales</a></p>
+    <p><a href="politiques-confidentialite.html">Politiques de confidentialités</a></p>
+  </div>
+
+</div>
+
+  <div class="footer-top">
+    <div class="socials">
+      <a href="https://www.instagram.com/keloestate/" target="_blank">
+        <img src="images/insta.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/toncompte" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 KELO'ESTATE</p>
+  </div>
+
+</footer>
+
+<!-- NAV BAR -->
+<script>
+
+const hamburger = document.querySelector(".hamburger")
+const menu = document.querySelector(".menu")
+
+hamburger.addEventListener("click", () => {
+
+menu.classList.toggle("active")
+hamburger.classList.toggle("open")
+
+})
+
+</script>
+
+</body>
+</html>
