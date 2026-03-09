@@ -81,6 +81,14 @@
 /* INFOS BIEN */
 /* ============================= */
 
+#prix-bien {
+    font-family: 'Jost', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #D4AF37;
+    letter-spacing: 0.01em;
+}
+
 .bien-info {
   display: flex;
   flex-direction: column;
@@ -94,10 +102,19 @@
   line-height: 1.3;
 }
 
+.bien-info h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #0D1B3D;
+    margin-bottom: 6px;
+}
+
 .bien-info .prix {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #D4AF37;
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #D4AF37;
 }
 
 .bien-badge {
@@ -110,10 +127,10 @@
   width: fit-content;
 }
 
-.bien-badge.vente     { background: #28a745; }
-.bien-badge.offre     { background: #ffc107; color: #0D1B3D; }
-.bien-badge.compromis { background: #17a2b8; }
-.bien-badge.vendu     { background: #dc3545; }
+.bien-badge.vente     { background: rgba(13, 27, 61, 0.85);  color: white; }
+.bien-badge.offre     { background: rgba(212, 175, 55, 0.9); color: #0D1B3D; }
+.bien-badge.compromis { background: rgba(139, 90, 43, 0.88); color: white; }
+.bien-badge.vendu     { background: rgba(0, 0, 0, 0.6); color: white; }
 
 .bien-info .description {
   display: none;
@@ -267,7 +284,6 @@
       <p class="prix" id="prix-bien"></p>
       <div class="bien-caracteristiques" id="caracteristiques"></div>
       <div class="bien-btns">
-        <a class="back-btn" href="index.html">← Retour</a>
         <a class="contact-btn" href="contact.html">Contacter l'agence</a>
       </div>
     </div>

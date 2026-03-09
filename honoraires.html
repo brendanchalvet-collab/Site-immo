@@ -6,111 +6,190 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nos Honoraires — KELO'ESTATE</title>
 <link rel="stylesheet" href="css/style.css">
+
 <style>
 
-.honoraires-page {
-  margin-top: 100px;
-  background: white;
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 20px 80px 20px;
-  text-align: center;
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ============================= */
+/* SECTION PRINCIPALE            */
+/* ============================= */
+
+.honoraires-section {
+    max-width: 680px;
+    margin: 120px auto 0 auto;
+    padding: 60px 24px 70px 24px;
 }
 
+/* ---- Logo ---- */
 .honoraires-logo {
-  max-width: 320px;
-  width: 100%;
-  margin-bottom: 50px;
-  border-radius: 10px;
+    display: block;
+    max-width: 160px;
+    margin: 0 auto 44px auto;
+    border-radius: 8px;
 }
 
-.honoraires-page h2 {
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  color: #0D1B3D;
-  margin-bottom: 32px;
-  position: relative;
-  padding-bottom: 14px;
+/* ---- Titre ---- */
+.honoraires-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 400;
+    color: #0D1B3D;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.02em;
 }
 
-.honoraires-page h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: #D4AF37;
-  border-radius: 2px;
+.honoraires-subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin: 0 0 44px 0;
 }
 
-.honoraires-table {
-  width: 100%;
-  max-width: 600px;
-  border-collapse: collapse;
-  margin-bottom: 36px;
+/* ---- Card tableau ---- */
+.honoraires-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #ece9e0;
+    box-shadow: 0 12px 40px rgba(13, 27, 61, 0.07);
+    overflow: hidden;
+    margin-bottom: 20px;
+    animation: fadeUp 0.6s ease both;
 }
 
-.honoraires-table tr {
-  border-bottom: 1px solid #e8e8e8;
+.honoraires-card-header {
+    padding: 18px 28px 14px 28px;
+    border-bottom: 1px solid #f0ede5;
 }
 
-.honoraires-table tr:last-child {
-  border-bottom: none;
+.honoraires-card-header p {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #D4AF37;
+    margin: 0;
 }
 
-.honoraires-table td {
-  padding: 14px 12px;
-  font-size: 1rem;
-  color: #0D1B3D;
-  line-height: 1.5;
+.honoraires-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 28px;
+    border-bottom: 1px solid #f0ede5;
+    transition: background 0.2s;
 }
 
-.honoraires-table td:first-child {
-  font-weight: 600;
-  text-align: left;
-  width: 55%;
+.honoraires-row:last-child { border-bottom: none; }
+.honoraires-row:hover { background: #fdfcf8; }
+
+.honoraires-row-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #0D1B3D;
 }
 
-.honoraires-table td:last-child {
-  text-align: right;
-  color: #D4AF37;
-  font-weight: bold;
-  font-size: 1.05rem;
+.honoraires-row-value {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #D4AF37;
+    white-space: nowrap;
+    margin-left: 20px;
 }
 
-.honoraires-note {
-  max-width: 620px;
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.7;
-  border-top: 1px solid #e0e0e0;
-  padding-top: 24px;
-  margin-bottom: 20px;
+/* ---- Note ---- */
+.honoraires-note-card {
+    background: #fdfcf8;
+    border-radius: 16px;
+    border: 1px solid #ece9e0;
+    padding: 22px 28px;
+    margin-bottom: 20px;
+    animation: fadeUp 0.6s 0.08s ease both;
 }
 
+.honoraires-note-card p {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* ---- SIRET ---- */
 .honoraires-siret {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #0D1B3D;
-  letter-spacing: 0.3px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: #bbb;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    animation: fadeUp 0.6s 0.12s ease both;
 }
+
+/* ============================= */
+/* CTA                           */
+/* ============================= */
+
+.honoraires-cta {
+    text-align: center;
+    padding: 50px 24px 70px 24px;
+    border-top: 1px solid #ece9e0;
+    background: white;
+}
+
+.honoraires-cta p {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 22px;
+}
+
+.honoraires-cta a {
+    display: inline-block;
+    background: #D4AF37;
+    color: #0D1B3D;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.88rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.honoraires-cta a:hover { background: #b99a2f; }
+
+/* ============================= */
+/* ANIMATION                     */
+/* ============================= */
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
 
 @media (max-width: 500px) {
-  .honoraires-table tr {
-    display: flex;
-    flex-direction: column;
-    padding: 12px 0;
-    text-align: center;
-  }
-
-  .honoraires-table td {
-    text-align: center !important;
-    padding: 4px 0;
-    width: 100% !important;
-  }
+    .honoraires-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .honoraires-row-value { margin-left: 0; }
 }
 
 </style>
@@ -126,9 +205,7 @@
     </a>
   </div>
   <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
   </div>
   <div class="menu">
     <a href="index.html">Accueil</a>
@@ -140,35 +217,44 @@
 </nav>
 
 <!-- CONTENU -->
-<div class="honoraires-page">
+<section class="honoraires-section">
 
-  <img class="honoraires-logo" src="images/logo1.jpeg" alt="Logo KELO'ESTATE">
+    <!-- <img class="honoraires-logo" src="images/logo1.jpeg" alt="Logo KELO'ESTATE"> -->
 
-  <h2>Honoraires dans le cadre d'une VENTE</h2>
+    <h1 class="honoraires-title">Nos honoraires</h1>
+    <p class="honoraires-subtitle">Transparence & clarté</p>
 
-  <table class="honoraires-table">
-    <tr>
-      <td>Jusqu'à 50 000 €</td>
-      <td>Forfait 5 000 €</td>
-    </tr>
-    <tr>
-      <td>De 50 001 € à 300 000 €</td>
-      <td>6 % TTC</td>
-    </tr>
-    <tr>
-      <td>Au-delà de 300 001 €</td>
-      <td>5 % TTC</td>
-    </tr>
-  </table>
+    <div class="honoraires-card">
+        <div class="honoraires-card-header">
+            <p>Honoraires — Vente</p>
+        </div>
+        <div class="honoraires-row">
+            <span class="honoraires-row-label">Jusqu'à 50 000 €</span>
+            <span class="honoraires-row-value">Forfait 5 000 €</span>
+        </div>
+        <div class="honoraires-row">
+            <span class="honoraires-row-label">De 50 001 € à 300 000 €</span>
+            <span class="honoraires-row-value">6 % TTC</span>
+        </div>
+        <div class="honoraires-row">
+            <span class="honoraires-row-label">Au-delà de 300 001 €</span>
+            <span class="honoraires-row-value">5 % TTC</span>
+        </div>
+    </div>
 
-  <p class="honoraires-note">
-    Les honoraires sont à la charge du vendeur, sauf en cas de convention expresse.
-    La différence entre les parties est précisée dans le mandat.
-  </p>
+    <div class="honoraires-note-card">
+        <p>Les honoraires sont à la charge du vendeur, sauf en cas de convention expresse. La différence entre les parties est précisée dans le mandat.</p>
+    </div>
 
-  <p class="honoraires-siret">S.A.S KELO'ESTATE — NICE — SIRET 992 666 636 00012</p>
+    <p class="honoraires-siret">S.A.S KELO'ESTATE — Nice — SIRET 992 666 636 00012</p>
 
-</div>
+</section>
+
+<!-- CTA -->
+<section class="honoraires-cta">
+    <p>Vous avez une question sur nos honoraires ?</p>
+    <a href="contact.html">Nous contacter</a>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -194,12 +280,8 @@
   </div>
   <div class="footer-top">
     <div class="socials">
-      <a href="https://www.instagram.com/keloestate/" target="_blank">
-        <img src="images/insta.png" alt="Instagram">
-      </a>
-      <a href="https://www.linkedin.com/in/toncompte" target="_blank">
-        <img src="images/linkedin.png" alt="LinkedIn">
-      </a>
+      <a href="https://www.instagram.com/keloestate/" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/toncompte" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -207,11 +289,10 @@
   </div>
 </footer>
 
-<!-- NAVBAR SCRIPT -->
 <script>
 document.querySelector(".hamburger").addEventListener("click", () => {
-  document.querySelector(".menu").classList.toggle("active");
-  document.querySelector(".hamburger").classList.toggle("open");
+    document.querySelector(".menu").classList.toggle("active");
+    document.querySelector(".hamburger").classList.toggle("open");
 });
 </script>
 
